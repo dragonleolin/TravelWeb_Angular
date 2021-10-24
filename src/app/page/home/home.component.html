@@ -1,0 +1,33 @@
+<div class="home_body">
+  <div class="homeMain_wrap">
+      <!-- <app-carousel></app-carousel> -->
+      <h2>哪裡有好玩的</h2>
+      <div class="playLists">
+        <div class="item" *ngFor="let item of datas; index as i">
+          <div
+            class="card shadow"
+            (click)="onClickalbumId(item.id, item.title)"
+          >
+            <div class="title">
+              {{ item.Name }}
+            </div>
+            <div class="itemImg">
+              <img
+                src="{{ item.Picture.PictureUrl1 }}"
+                alt="{{ item.Picture.PictureDescription1 }}"
+              />
+              <div class="description">{{ item.Picture.PictureDescription1 }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <!-- <div class="fbMessage">
+    <a href="http://m.me/100463904770895"
+    target="_blank">
+        <i class="far fa-comment-dots fbicon"></i> 
+    </a>
+  </div> -->
+</div>
+
